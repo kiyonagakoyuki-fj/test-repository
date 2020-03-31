@@ -1,26 +1,26 @@
 {
   "Resources" : {
-    "TestVPC2" : {
+    "TestVPC3" : {
       "Type" : "AWS::EC2::VPC",
       "Properties" : {
         "CidrBlock" : "100.0.0.0/16",
         "EnableDnsSupport" : "true",
         "EnableDnsHostnames" : "true",
         "InstanceTenancy" : "default",
-        "Tags" : [ {"Key" : "Name", "Value" : "TestVPC2"}]
+        "Tags" : [ {"Key" : "Name", "Value" : "TestVPC3"}]
       }
     },
-    "TestIGW2" : {
+    "TestIGW3" : {
         "Type" : "AWS::EC2::InternetGateway",
         "Properties" : {
-          "Tags" : [ {"Key" : "Name", "Value" : "TestIGW2"}]
+          "Tags" : [ {"Key" : "Name", "Value" : "TestIGW3"}]
         }
       },
-    "AttachIGW2" : {
+    "AttachIGW3" : {
         "Type" : "AWS::EC2::VPCGatewayAttachment",
         "Properties" : {
-          "InternetGatewayId" : { "Ref" : "TestIGW2" },
-          "VpcId" : { "Ref" : "TestVPC2" }
+          "InternetGatewayId" : { "Ref" : "TestIGW3" },
+          "VpcId" : { "Ref" : "TestVPC3" }
         }
     }
   }
